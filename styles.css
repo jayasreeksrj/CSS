@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p{
+    color:black;
+}
+#container {
+    display: flex;
+}
+
+#left-frame {
+    flex: 1;
+    margin:0;
+    padding:0;
+    
+}
+
+#right-frame {
+    flex: 3;
+    margin:20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+}
+
+#profile-image {
+    border-radius: 50%; 
+    width: 150px;
+    border: 3px solid #ccc; 
+    height: 150px; 
+    image-orientation:center;
+}
+
+a {
+    text-decoration: none;
+    color:hotpink;
+    color: #333;
+}
+a:link{
+    color:blue;
+}
+a:visited{
+    color:blue;
+}
+
+a:hover {
+    color:red;
+    text-decoration: underline;
+}
+
+#left-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#left-frame a:link{
+    text-decoration:green;
+}
+
+#left-frame a:visited{
+    text-decoration:red;
+}
+
+#left-frame a:hover {
+    color:blue;
+    text-decoration:black;
+}
+#left-frame a:active{
+    text-decoration:orange;
+}
+#left-frame a {
+
+    color: blue;
+    transition: color 0.3s;
+    display: block;
+    text-decoration:solid;
+    color: #333;
+
+}
+#right-frame {
+    scroll-behavior: smooth;
+}
+
+#right-frame::-webkit-scrollbar {
+    display: none; 
+}
+
+#right-frame:hover {
+    scroll-behavior: auto;
+}
+#right-frame:hover #left-frame a {
+    color: red; 
+}
+
+#left-frame a:target {
+    font-weight: bold;
+    color: red;
+}
+
+
+
