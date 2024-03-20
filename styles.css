@@ -9,6 +9,7 @@ body {
     display: flex;
 }
 
+}
 #left-frame {
     flex: 1;
     margin: 0;
@@ -22,28 +23,67 @@ body {
     overflow-y: auto;
 }
 
+
+
 #left-frame h3 {
-    padding: 10px;
+    font-size: 24px;
+}
+
+#left-frame a {
+  
+    font-size: 18px;
+}
+
+
+#left-frame {
+height:100%;
+    flex: 3;
     margin: 0;
-    text-align: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    max-height: 100%; /* Set maximum height to the viewport height */
+    width: 400px; /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding-top: 20px;
+
+}
+
+#left-frame h3 {
+    padding: 5px;
+    margin: 0;
     border-bottom: 1px solid #555;
+    font-size: 18px; /* Adjust the font size as needed */
+align:center;
 }
 
 #left-frame a {
     display: block;
-    padding: 10px;
+    padding: 5px;
+    font-size: 18px; /* Adjust the font size as needed */
     color: #fff;
     transition: background-color 0.3s;
-}
-
-#left-frame a:visited {
-    color: #fff;
 }
 
 #left-frame a:hover {
     background-color: #555;
     text-decoration: none;
 }
+#left-frame {
+    flex: 0 0 30%; /* Set flex basis to 25% */
+    /* Other styles remain the same */
+}
+
+#right-frame {
+    flex: 1; /* Adjust the right frame to take the remaining space */
+    /* Other styles remain the same */
+}
+
+
 
 #left-frame a:active {
     background-color: #888;
@@ -62,11 +102,26 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+#right-frame section {
+    display: none;
+}
 
-h1, h2, h3 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
+#right-frame section:target {
+    display: block;
+    text-align: center; /* Center align the content */
+    /* Add other styles as needed */
+}
+
+#right-frame h1,
+#right-frame h2,
+#right-frame h3 {
+    text-align: left; /* Align headings to the left */
+}
+
+#right-frame p,
+#right-frame ul,
+#right-frame ol {
+    text-align: left; /* Align paragraphs and lists to the left */
 }
 
 a {
@@ -115,8 +170,9 @@ tr:hover {
     background-color: #ddd;
 }
 
+
 ul {
-    list-style-type: none;
+    list-style-type:none;
     padding: 0;
 }
 
