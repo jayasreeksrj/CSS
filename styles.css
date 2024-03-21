@@ -24,6 +24,21 @@ body {
 }
 
 
+#right-frame section:target {
+    display: block; /* Show the target section */
+    padding-top: calc(50vh - 50%); /* Center vertically */
+}
+#right-frame section {
+    max-width: 50%; /* Example maximum width */
+    margin: 0 auto; /* Center horizontally */
+    display: none; /* Hide sections by default */
+    position: relative; /* Needed for centering */
+    top: 50%; /* Move section down by half of its height */
+    transform: translateY(-50%); /* Center vertically */
+}
+#right-frame section:first-child {
+    display: block;
+}
 
 #left-frame h3 {
     font-size: 24px;
@@ -214,6 +229,24 @@ p {
 .right {
     text-align: right;
 }
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .about {
+        page-break-after: always;
+        position: relative;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 1cm;
+    }
+}
+
 
 blockquote {
     background-color: #f9f9f9;
